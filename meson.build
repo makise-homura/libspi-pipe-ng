@@ -1,0 +1,6 @@
+project('libspi-pipe-ng', 'c', version: '0.1')
+libspipipeng = library('spi-pipe-ng', 'libspi-pipe-ng.c', install: true, version: meson.project_version())
+libspipipeng_dep = declare_dependency(link_with : libspipipeng)
+install_headers('libspi-pipe-ng.h')
+pkg_mod = import('pkgconfig')
+pkg_mod.generate(libraries : libspipipeng, version: meson.project_version(), name: 'libspi-pipe-ng', filebase : 'libspi-pipe-ng', description : 'A library for sending requests and get replies from spidev')

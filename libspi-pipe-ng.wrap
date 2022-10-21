@@ -1,0 +1,4 @@
+[wrap-git]
+url = https://github.com/makise-homura/libspi-pipe-ng.git
+revision = head
+depth = 1
